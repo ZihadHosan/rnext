@@ -1,7 +1,13 @@
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import HeroSection from "./components/HeroSection";
+
 function App() {
   return (
     <>
-      <h1 className="text-5xl text-cyan-700">Welcome to tasker!</h1>
+      <Header />
+      <HeroSection />
+      <Footer />
     </>
   );
 }
