@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Wrapper from "./Template";
 
 export default function BatchUpdate() {
     // const [number, setNumber] = useState(0);
@@ -87,38 +88,39 @@ export default function BatchUpdate() {
                     ({person.email})
                 </p>
             </div > */}
+            <Wrapper title={'Updating Objects in State'} lswLesson="Module - 2.8">
+                <div className="form-box border-[1px] border-cyan-700 rounded-[10px] p-8 mx-auto my-5 w-max">
+                    <h2 className="text-[30px] text-center text-cyan-600 uppercase font-300">Change name through input</h2>
+                    <form action="#" className="flex sm:flex-col md:flex-col lg:flex-row flex-col mt-3 gap-3">
+                        <label htmlFor="">First name
+                            <input
+                                name="firstName"
+                                value={person.firstName}
+                                onChange={handleChange}
+                                className="input-style"
+                                type="text" />
+                        </label>
+                        <label htmlFor="">Last name
+                            <input
+                                name="lastName"
+                                value={person.lastName}
+                                onChange={handleChange}
+                                className="input-style"
+                                type="text" />
+                        </label>
+                        <label htmlFor="">Email
+                            <input
+                                name="email"
+                                value={person.email}
+                                onChange={handleChange}
+                                className="input-style"
+                                type="email" />
+                        </label>
+                    </form>
 
-            <div className="form-box border-[1px] border-cyan-700 rounded-[10px] p-8 mx-auto my-5 w-max">
-                <h2 className="text-[30px] text-center text-cyan-600 uppercase font-300">Change name through input</h2>
-                <form action="#" className="flex sm:flex-col md:flex-col lg:flex-row flex-col mt-3 gap-3">
-                    <label htmlFor="">First name
-                        <input
-                            name="firstName"
-                            value={person.firstName}
-                            onChange={handleChange}
-                            className="input-style"
-                            type="text" />
-                    </label>
-                    <label htmlFor="">Last name
-                        <input
-                            name="lastName"
-                            value={person.lastName}
-                            onChange={handleChange}
-                            className="input-style"
-                            type="text" />
-                    </label>
-                    <label htmlFor="">Email
-                        <input
-                            name="email"
-                            value={person.email}
-                            onChange={handleChange}
-                            className="input-style"
-                            type="email" />
-                    </label>
-                </form>
-
-                <h3 className="text-red-400 sm:text-[18px] md:text-[25px]  text-center mt-4 h-[37.5px]">{person.firstName}{' '} {person.lastName}{' '} {person.email}</h3>
-            </div>
+                    <h3 className="text-red-400 sm:text-[18px] md:text-[25px]  text-center mt-4 h-[37.5px]">{person.firstName}{' '} {person.lastName}{' '} {person.email}</h3>
+                </div>
+            </Wrapper >
 
 
         </>

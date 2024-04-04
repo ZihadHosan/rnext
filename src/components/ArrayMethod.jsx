@@ -1,31 +1,35 @@
 import { useState } from 'react';
+import Wrapper from './Template';
 
 let nextId = 0;
 
-export default function List() {
+export default function ArrayMethod() {
     const [name, setName] = useState('');
     const [artists, setArtists] = useState([]);
 
     return (
         <>
-            <h1>Inspiring sculptors:</h1>
-            <input
-                value={name}
-                onChange={e => setName(e.target.value)}
-            />
-            <button onClick={() => {
-                setArtists(
-                    [
-                        ...artists,
-                        { id: nextId, name: name }
-                    ]
-                );
-            }}>Add</button >
-            <ul>
-                {artists.map(artist => (
-                    <li key={artist.id}>{artist.name}</li>
-                ))}
-            </ul>
+            <Wrapper title={'Updating Arrays in State'} lswLesson={"Module - 2.9"}>
+                <h1>Inspiring sculptors:</h1>
+                <input
+                    value={name}
+                    onChange={e => setName(e.target.value)}
+                />
+                <button onClick={() => {
+                    setArtists(
+                        [
+                            ...artists,
+                            { id: nextId, name: name }
+                        ]
+                    );
+                }}>Add</button >
+                <ul>
+                    {artists.map(artist => (
+                        <li key={artist.id}>{artist.name}</li>
+                    ))}
+                </ul>
+            </Wrapper >
+
         </>
     );
 }
