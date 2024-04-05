@@ -1,16 +1,16 @@
-import ArrayMethodComp from "./components/ArrayMethod";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import HeroSection from "./components/HeroSection";
-import BatchUpdate from "./components/Practice";
+import TaskBoard from "./components/Taskboard/TaskBoard";
 
 function App() {
   return (
     <>
       <Header />
-      <HeroSection />
-      <BatchUpdate />
-      <ArrayMethodComp />
+      <div className="flex flex-col items-center">
+        <HeroSection />
+        <TaskBoard />
+      </div>
       <Footer />
     </>
   );
