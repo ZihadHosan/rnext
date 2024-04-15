@@ -1,16 +1,16 @@
-import Form from "./components/Form";
+import NewForm from "./components/NewForm";
 import "./styles.css";
 
-const statuses = ["empty", "typing", "submitting", "success", "error"];
-
 function App() {
-    return (
-        <div>
-            {statuses.map((status) => (
-                <Form key={status} status={status} />
-            ))}
-        </div>
-    );
+  const statuses = ["empty", "typing", "submitting", "success", "error"];
+  //console.log(statuses);
+  return (
+    <>
+      {statuses.map((status) => (
+        <NewForm key={status} status={status} />
+      ))}
+    </>
+  );
 }
 
 export default App;
